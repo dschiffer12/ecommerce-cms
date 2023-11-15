@@ -1,7 +1,7 @@
 "use client";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { BillboardColumn } from "./columns";
+import { CategoryColumn } from "./columns";
 import { Button } from "@/components/ui/button";
 import { Edit, MoreHorizontal } from "lucide-react";
 import { toast } from "react-hot-toast";
@@ -11,7 +11,7 @@ import axios from "axios";
 import { AlertModal } from "@/components/modals/alert-modal";
 
 interface CellActionProps {
-    data: BillboardColumn;
+    data: CategoryColumn;
 }
 export const CellAction: React.FC<CellActionProps> = ({
     data
@@ -22,7 +22,7 @@ export const CellAction: React.FC<CellActionProps> = ({
     const [open, setOpen] = useState(false);
     const onCopy = (id: string) => {
         navigator.clipboard.writeText(id);
-        toast.success("Billboard ID copied to clipboard.")
+        toast.success("Category ID copied to clipboard.")
     };
     const onDelete = async () => {
         try {
