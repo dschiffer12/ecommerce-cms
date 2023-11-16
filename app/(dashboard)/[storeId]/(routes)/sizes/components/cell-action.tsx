@@ -32,7 +32,7 @@ export const CellAction: React.FC<CellActionProps> = ({
           router.push(`/${params.storeId}/sizes`);
           toast.success('Size Deleted.');
         } catch (error: any) {
-          toast.error('Make sure you removed all categories using this billboard first.');
+          toast.error('Make sure you removed all products using this size first.');
         } finally {
           setLoading(false);
           setOpen(false);
