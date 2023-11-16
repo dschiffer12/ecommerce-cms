@@ -35,11 +35,13 @@ type CategoryFormValues = z.infer<typeof formSchema>
 interface CategoryFormProps {
   initialData: Category | null;
   billboards: Billboard[];
+
 };
 
 export const CategoryForm: React.FC<CategoryFormProps> = ({
   initialData,
   billboards
+
 }) => {
   const params = useParams();
   const router = useRouter();
